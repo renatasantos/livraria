@@ -1,0 +1,58 @@
+/* Estilos para o layout do formulário e contêineres */
+.form-container {
+  flex: 0 1 auto;
+  padding: 0px;
+  margin-bottom: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre os inputs */
+}
+
+po-field-container, po-input, po-textarea {
+  width: 100%;
+}
+
+po-field-container > div {
+  width: 100%;
+}
+
+input[poInput], textarea[poTextarea] {
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-full-height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.button-container {
+  margin-top: auto;
+  padding: 20px;
+  padding-bottom: 60px; /* Aumente este valor para subir os botões */
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Espaço entre os botões */
+}

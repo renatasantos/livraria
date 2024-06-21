@@ -1,0 +1,40 @@
+.h1 {
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: auto; 
+  margin-bottom: auto;
+}
+
+.center{
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: auto; 
+    margin-bottom: auto;
+}
+
+.multiselect{
+    margin-left: auto; 
+    margin-right: 0;
+    margin-top: auto; 
+    margin-bottom: auto;
+}
+
+.custom-image {
+  width: 42%; /* Ajusta a largura da imagem ao tamanho do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.image-container {
+  text-align: center; /* Centraliza a imagem */
+  padding: 1px; /* Adiciona espaçamento ao redor da imagem */
+  
+}
+
+.custom-card {
+  border-radius: 15px; /* Bordas arredondadas */  
+  overflow: hidden; /* Para garantir que o conteúdo dentro do card respeite as bordas arredondadas */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para melhorar o visual */
+}
+
+
+

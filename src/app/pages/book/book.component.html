@@ -1,0 +1,124 @@
+<div>
+  <div>
+    <h2>Cadastro Livro</h2>
+  </div>
+
+  <div class="container">
+    <div class="form-container">
+      <title>Adicionar Livro</title>
+      <form [formGroup] = "formGroup">
+        <po-field-container>
+         <po-datepicker
+            class="po-sm-3"
+            p-placeholder="Data da Publicação"
+            name="datepicker"
+            formControlName="dataPublicacao"
+            p-label="Data da Publicação"
+            data-cy="datePublish"
+          >
+          </po-datepicker>
+
+          <po-datepicker
+            class="po-sm-3"
+            p-placeholder="Data da Inclusão"
+            name="datepicker"
+            formControlName="dataInclusao"           
+            p-label="Data da Inclusão"
+            data-cy="dateInclude"
+          >
+          </po-datepicker>
+          <po-combo
+            class="po-sm-3"
+            name="estaDisponivel"
+            (p-change)="estaDisponivel = $event"
+            p-label="Disponível"
+            formControlName="estaDisponivel"
+            [p-show-required]="true"
+            [p-options]="[
+              { label: 'Sim', value: 1 },
+              { label: 'Não', value: 2 }
+            ]"
+          >
+          </po-combo>
+        </po-field-container>
+
+        <po-field-container>
+          <po-input
+            class="po-sm-6"
+            name="titulo"
+            formControlName="titulo"
+            p-placeholder="Título"
+            p-label="Título do Livro"
+            data-cy="inputTitleBook"
+          >
+            <input poInput required />
+          </po-input>
+
+          <po-combo
+            p-label="Autor"
+            p-placeholder="Autor"
+            class="po-sm-6"
+            name="autor"
+            formControlName="autor"
+            [p-options]="authorList"
+            (p-change)="autor = $event"
+          >
+            <input poInput required />
+          </po-combo>
+        </po-field-container>
+
+        <po-field-container>
+          <po-input 
+          class="po-sm-6" 
+          p-label="Editora" 
+          p-placeholder="Editora"
+          name="editora" 
+          formControlName="editora"
+          >
+            <input poInput required />
+          </po-input>
+        </po-field-container>
+        <po-textarea
+          class="po-sm-6"
+          p-label="Observações"
+          p-placeholder="Observações"
+          name="observacao"
+          formControlName="observacao"
+          data-cy="inputObservations"          
+        >
+          
+        </po-textarea>
+
+        <po-field-container class="button-container">
+          <div class="button-wrapper">
+            <po-button
+              class="po-md-2"
+              p-label="Cancelar"
+              p-kind="secondary"
+              (p-click)="cancel()"
+              data-cy="btnCancel"
+            ></po-button>
+            <po-button
+              class="po-md-2"
+              p-label="Salvar"
+              p-kind="primary"
+              (p-click)="saveBook()"
+              data-cy="btnSave"
+            ></po-button>
+          </div>
+        </po-field-container>
+      </form>
+    </div>
+  </div>
+  <div class="table-container">
+    <po-table
+      [p-columns]="columns"
+      [p-items]="booksList"
+      [p-actions-right]="true"
+      [p-actions]="actions"
+      [p-literals]="{ noData: 'Nenhum livro encontrado' }"
+      [p-filter-type]="filterMode"
+    >
+    </po-table>
+  </div>
+</div>

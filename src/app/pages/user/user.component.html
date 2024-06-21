@@ -1,0 +1,81 @@
+<div>
+    <h2>Cadastro Usuário</h2>
+  
+    <div class="container">
+      <div class="form-container">
+        <title>Adicionar Livro</title>
+        <form class="form-full-height">
+   
+          <!-- Campo Título -->
+          <po-field-container>
+            <po-input
+              class="po-sm-6"
+              name="user"
+              [(ngModel)]="nome"
+              p-placeholder="Informe o nome do usuário"
+              p-label="Nome do Usuário"
+              data-cy="nameUser"
+
+            >
+              <input poInput required />
+            </po-input>  
+          
+            <po-input
+              p-label="CPF"
+              p-placeholder="Informe o CPF"
+              class="po-sm-3"
+              name="cpf"
+              [(ngModel)]="cpf"
+              data-cy="cpfUser"
+            >
+              <input poInput required />
+            </po-input>
+
+            <po-datepicker
+            class="po-sm-3"
+            p-placeholder="Data de nascimento"
+            name="datepicker"
+            [(ngModel)]="dataNascimento"
+            p-label="Data de nascimento"
+            data-cy="dateNascUser"
+          >
+          </po-datepicker>
+          </po-field-container>
+  
+          <po-field-container class="button-container">
+            <div class="button-wrapper">
+              <po-button
+                class="po-md-2"
+                p-label="Cancelar"
+                p-kind="secondary"
+                (p-click)="cancel()"
+                data-cy="btnCancel"
+              ></po-button>
+              <po-button
+                class="po-md-2"
+                p-label="Salvar"
+                p-kind="primary"
+                (p-click)="saveUser()"
+                [p-disabled]="!isFormValid"
+                data-cy="btnSave"
+              ></po-button>
+            </div>
+          </po-field-container>
+        </form>
+      </div>
+    </div>
+  
+    <div class="table-container">
+      <po-table
+        [p-columns]="columns"
+        [p-items]="usersList"
+        [p-actions]="actions"
+        [p-actions-right]="true"
+        [p-literals]="{ noData: 'Nenhum usuário encontrado' }"
+        [p-filter-type]="filterMode"
+        data-cy="tableUser"
+      >
+      </po-table>
+    </div>
+  </div>
+  

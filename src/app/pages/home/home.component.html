@@ -1,0 +1,13 @@
+<div class="po-wrapper">
+  <po-toolbar p-title="Biblioteca Totvs"></po-toolbar>
+  <po-menu [p-menus]="menus"></po-menu>
+
+  <po-page-default>
+    <app-index *ngIf="menuId === 0" (changeMenuId)="changeMenuId($event)"> </app-index>
+    <app-author *ngIf="menuId === 1"> </app-author>
+    <app-book *ngIf="menuId === 2"> </app-book>
+    <app-user *ngIf="menuId === 3"> </app-user>
+    <app-about *ngIf="menuId === 4"> </app-about>
+    <app-firstSteps *ngIf="menuId === 5"> </app-firstSteps>
+  </po-page-default>
+</div>

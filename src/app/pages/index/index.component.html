@@ -1,0 +1,83 @@
+
+<div>
+  <div>
+    <h1>Bem Vindo</h1>
+  </div>
+<div class="po-row">
+  <po-widget
+    class="po-lg-3 card custom-card"
+    p-primary-label="Cadastrar Autor"
+    [p-help]="help ?? ''"
+    (p-primary-action)="showAuthor()"
+    (p-click)="showAuthor()"
+    data-cy="card-add-author"
+    (p-title-action)="showJavascriptTechnologies()"
+  >
+    <div class="image-container">
+      <img
+        src="assets/images/autor.png"
+        alt="Cadastrar Livro"
+        class="custom-image"
+      />
+    </div>
+    <po-info [p-label]="label ?? ''" [p-value]="value ?? ''"></po-info>
+  </po-widget>
+
+  <po-widget
+    class="po-lg-3 card custom-card"
+    p-primary-label="Cadastrar Livro"
+    [p-help]="help ?? ''"
+    (p-primary-action)="showBook()"
+    (p-click)="showBook()"
+    data-cy="card-add-book"
+    (p-title-action)="showJavascriptTechnologies()"
+  >
+    <div class="image-container">
+      <img
+        src="assets/images/pilha-livros-2.png"
+        alt="Cadastrar Livro"
+        class="custom-image"
+      />
+    </div>
+    <po-info [p-label]="label ?? ''" [p-value]="value ?? ''"></po-info>
+  </po-widget>
+
+  <po-widget
+    class="po-lg-3 card custom-card"
+    p-primary-label="Cadastro de Usuários"
+    [p-help]="help ?? ''"
+    (p-primary-action)="showUser()"
+    (p-click)="showUser()"
+    data-cy="card-add-user"
+    (p-title-action)="showJavascriptTechnologies()"
+  >
+    <div class="image-container">
+      <img
+        src="assets/images/user.png"
+        alt="Consultar Livro"
+        class="custom-image"
+      />
+    </div>
+    <po-info [p-label]="label ?? ''" [p-value]="value ?? ''"></po-info>
+  </po-widget>
+
+  <po-widget
+    class="po-lg-3 card custom-card"
+    p-primary-label="Sobre"
+    [p-help]="help ?? ''"
+    (p-primary-action)="showAbout()"
+    (p-click)="showAbout()"
+    data-cy="card-about"
+    (p-title-action)="showJavascriptTechnologies()"
+  >
+    <div class="image-container">
+      <img
+        src="assets/images/info.png"
+        alt="Informações"
+        class="custom-image"
+      />
+    </div>
+    <po-info [p-label]="label ?? ''" [p-value]="value ?? ''"></po-info>
+  </po-widget>
+</div>
+</div>
